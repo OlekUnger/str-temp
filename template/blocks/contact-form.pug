@@ -1,0 +1,33 @@
+.modal-001.modal.fade#contact(role="dialog")
+  .modal-dialog
+    .modal-content
+      form(role="form").form-horizontal.text-center
+        .modal-header
+          h4 Свяжитесь с нами
+          p
+            | Свяжитесь с нашей службой поддержки клиентов,
+            br 
+            | если у вас есть какие-либо воспросы
+
+        .modal-body
+          .form-group
+            input(type="text" placeholder="Ваше имя" name="name" id="name" required).form-control
+          
+          .form-group
+            input(type="email" placeholder="Email" name="email" id="email" required).form-control
+
+          .form-group
+            input(type="text" placeholder="Ваше сообщение" name="text" id="text" required).form-control
+        
+        .modal-footer
+          .checkbox.text-left
+            input(type="checkbox" id="checkbox")
+            label(for="checkbox")
+              i.fa.fa-check
+              
+            p(href="#")
+              a(href="").agreement
+                | Даю свое согласие на обработку персональных данных
+                | в соответствии с пользовательским соглашением
+
+        a(type="button" name="send-btn" id="send-btn").btn.btn-default.send-btn Отправить сообщение

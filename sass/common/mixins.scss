@@ -1,0 +1,131 @@
+@mixin inline-top {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@mixin inline-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin inline-bottom {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+
+@mixin pseudo {
+        content: "";
+        position: absolute
+}
+
+@mixin size($value) {
+    $width: nth($value, 1);
+    $height: $width;
+
+    @if length($value) > 1 {
+        $height: nth($value, 2);
+    }
+
+    @if is-size($height) {
+        height: $height;
+    } @else {
+        @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+    }
+
+    @if is-size($width) {
+        width: $width;
+    } @else {
+        @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+    }
+}
+
+@mixin text-truncate{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: no-wrap;
+}
+
+@mixin min1920 {
+    @media (min-width: 1920px) {
+        @content
+    }
+}
+
+@mixin max1200 {
+    @media (max-width: 1200px) {
+        @content
+    }
+}
+
+@mixin max1024 {
+    @media (max-width: 1024px) {
+        @content
+    }
+}
+
+@mixin max960 {
+    @media (max-width: 960px) {
+        @content
+    }
+}
+
+@mixin max768 {
+    @media (max-width: 768px) {
+        @content
+    }
+}
+
+@mixin max480 {
+    @media (max-width: 480px) {
+        @content
+    }
+}
+
+@mixin max360 {
+    @media (max-width: 360px) {
+        @content
+    }
+}
+
+@mixin max320 {
+    @media (min-width: 320px) {
+        @content
+    }
+}
+
+@mixin min1200 {
+    @media (min-width: 1200px) {
+        @content
+    }
+}
+
+@mixin min1024 {
+    @media (min-width: 1024px) {
+        @content
+    }
+}
+
+@mixin min960 {
+    @media (min-width: 960px) {
+        @content
+    }
+}
+
+@mixin min768 {
+    @media (min-width: 768px) {
+        @content
+    }
+}
+
+@mixin min360 {
+    @media (min-width: 360px) {
+        @content
+    }
+}
+
+@mixin min320 {
+    @media (min-width: 320px) {
+        @content
+    }
+}

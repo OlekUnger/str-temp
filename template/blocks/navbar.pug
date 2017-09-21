@@ -1,0 +1,54 @@
+.navbar-001.navbar
+  .container
+    .navbar-header   
+      button(type="button" data-toggle="collapse" data-target="#navbarNavDropdown").navbar-toggle
+        span.sr-only Открыть меню
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href="#").navbar-brand Logo
+
+    .collapse.navbar-collapse#navbarNavDropdown
+
+      //- dropdown menu
+      ul.navbar-nav.nav
+        li.nav-item.active
+          a(href="#").nav-link Главная 
+            
+          li.nav-item.dropdown
+            a(href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").nav-link.dropdown-toggle#dropdown01 Каталог товаров
+              span.caret
+
+            ul(aria-labelledby="dropdown01").dropdown-menu
+              li.dropdown-item
+                a(href="#").dropdown-link Категория 1
+
+              li.dropdown-item.submenu-toggle
+                a(href="#").dropdown-link Категория 2
+                  span.caret
+
+                ul.dropdown-menu.dropdown-submenu
+                  li.dropdown-item
+                    a(href="#").dropdown-link Категория 1
+                  li.dropdown-item
+                    a(href="#").dropdown-link Категория 2
+                  li.dropdown-item  
+                    a(href="#").dropdown-link Категория 3
+              li.dropdown-item
+                a(href="#").dropdown-link Категория 3
+
+        li.nav-item
+          a(href="#").nav-link О нашем магазине
+
+        li.nav-item
+          a(href="#").nav-link Доставка
+
+        li.nav-item
+          a(href="#").nav-link Оплата
+
+        li.nav-item
+          a(href="#").nav-link Контакты
+
+      div.navbar-nav
+        a(href="#contact" data-toggle="modal" title="Заказать звонок").btn.navbar-btn Заказать звонок
+          i.fa.fa-phone.icon

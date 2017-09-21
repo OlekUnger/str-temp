@@ -1,0 +1,207 @@
+.navbar-001
+  background-color: $nav_bg
+  border: 0px
+  padding-top: 0
+  padding-bottom: 0
+  border-radius: 0
+  margin-bottom: 0
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus
+    background-color: transparent
+  
+  .navbar-header
+    @include max960
+      width: 100%
+      margin: 0
+      padding: 0
+
+  .icon-bar
+    background-color: #fff
+  
+  .navbar
+    @include max960
+      width: 100%
+      
+  .navbar-nav
+    @include max960
+      padding-bottom: 20px
+      width: 100%
+      margin: 0 auto
+
+    &:nth-child(2)
+      float: right
+      @include max960
+        float: left
+
+  .navbar-nav
+    li.nav-item
+      @include max960
+        float: none
+      
+    a.nav-link
+      display: block
+      color: #fff
+      font-size: 1.2rem
+      font-weight: 700
+      line-height: 2rem
+      text-transform: uppercase
+      letter-spacing: .04rem
+      padding: 16px 15px
+      text-align: center
+      &.active,
+      &:hover,
+      &:focus,
+        background-color: $nav_active
+
+      &.disabled
+        background-color: transparent
+    
+  .navbar-brand
+    color: #fff
+    font-size: 3.5rem
+    font-weight: 700
+    line-height: 2rem
+    text-transform: uppercase
+    letter-spacing: .1rem
+    margin-right: 1.5rem
+    
+  .navbar-btn
+    display: block
+    max-width: 320px
+    margin: 8px auto
+    padding: 0 1.5rem
+    background-color: transparent
+    border: 2px solid $bg
+    border-radius: 3px
+    color: #fff
+    text-decoration: none
+    text-align: center
+    letter-spacing: .5px
+    font-size: 1.2rem
+    line-height: 3.1rem
+    font-weight: 700
+    text-transform: uppercase
+    transition: all ease-in-out .1s
+    &:hover
+      background-color: #fff 
+      color: $link_hover
+      .icon
+        color: $link_hover
+
+    @include min960
+      font-size: 0
+      line-height: 0
+
+    @include min1200
+      font-size: 1.2rem
+      line-height: 3.1rem
+
+    .icon
+      display: none
+      @include min960
+        display: block
+        color: #fff
+        font-size: 2.5rem!important
+        line-height: 3.1rem
+
+      @include min1200
+        display: none
+
+  .dropdown-toggle:after
+    border-left: 0.4em solid transparent
+    border-right: 0.4em solid transparent
+    border-top: 0.4em solid
+    margin-left: 0.6em
+
+  .navbar-toggle
+    @include max960
+      display: block
+      margin-right: 0
+      position: relative
+      float: right
+
+  .navbar-collapse.collapse
+    box-shadow: none
+    padding: 0
+    @include min768
+      display: none!important
+      visibility: hidden!important
+
+    @include min960
+      display: block!important
+      visibility: visible!important
+
+  .navbar-collapse.in
+    @include min768
+      display: block!important
+      visibility: visible!important
+
+    .icon
+      display: none
+
+  .navbar-nav .open
+    .dropdown-menu
+      @include max960
+        position: static
+        float: none
+        width: auto
+        margin-top: 0
+        background-color: transparent
+        border: 0
+        box-shadow: none
+        li.dropdown-item
+        border-bottom: 0
+
+  .dropdown-menu
+    box-shadow: 0 4px 8px rgba(0,0,0,.13)
+    width: 260px
+    margin: 0
+    padding: 0
+    border-radius: 0 0 3px 3px
+    border: 1px solid $border
+
+  
+  
+  li.dropdown-item
+    width: 100%
+    position: relative
+    &:not(:last-child)
+      border-bottom: 1px solid $border
+      @include max960
+        border-bottom: 0
+        text-align: center
+
+  a.dropdown-link
+    font-weight: 300
+    font-size: 1.5rem
+    line-height: 2rem
+    padding: 1rem 1.5rem
+    color: $main_color
+    text-decoration: none
+    &:hover,
+    &:focus
+      @include max960
+        background-color: transparent
+        color: rgba(255,255,255,.6)
+
+    @include max960
+      color: #fff
+      font-weight: 400
+      text-align: center
+    .caret
+      @include min960
+        transform: rotate(-90deg)
+        margin-left: 140px
+        
+  .dropdown-submenu
+    position: absolute
+    left: 255px!important
+    top: -0px!important
+    z-index: 2
+    @include max960
+      position: static
+      text-align: right
+      padding: 10px 0 10px 30px
+      bottom: 100%
+      left: 0
